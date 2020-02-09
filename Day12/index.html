@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    body{background-color: green;}
+    h2{ text-align: center;}
+      #demo{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JavaScript Loops</h2>
+
+    <p id="demo"></p>
+    <p id="star"></p>
+
+    <script>
+      var blackPowerImages =
+      ["https://s1.r29static.com/bin/entry/530/x,80/1928315/image.jpg",
+      "https://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2011/4/25/201142585712328360_20.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmBJIxUwbIaEKPhl2xD0U-rRmLC2yPXDwPdSAS_IJAiXV43jgO",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT2MObqLf7R7AcFnnRnock5nOyW_Up9luHvI-bPTIgvAFKsAEYh"];
+
+      var text = "";
+      for (var myNum = 0; myNum < blackPowerImages.length; myNum++)
+      {
+        text += "<img width='50%' src='"+ blackPowerImages[myNum] +"'/>"+"<br>";
+      }
+
+      //var text2 = "*";
+      //for (var lineNum = 0; lineNum < 5; lineNum++)
+      //{
+        //for (var col = 0; col < 5; col++)
+        //{
+          //text2 += text2;
+          //text2 += text2 + "<br>";
+        //}
+      //}
+
+
+      document.getElementById("demo").innerHTML = text;
+      //document.getElementById("star").innerHTML = text2 +"<br>";
+    </script>
+
+  </body>
+</html>
