@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+      .imgs{
+        height: 400px;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is an example of a <u>While</u> Loop with Images </h1>
+    <div id="imageSection">
+
+    </div>
+
+    <script>
+      var counter = 1;
+      while(counter <= 6)
+      {
+        document.write("<img class= 'imgs' src= 'images/image"+counter+".jpeg'/> ");
+        document.write("<br>");
+        document.write("<p>Dope Image # " + counter + "</p>");
+        counter++;
+      }
+      alert('Loop Complete');
+    </script>
+
+  </body>
+</html>

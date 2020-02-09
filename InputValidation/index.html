@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1{
+        text-align: center;
+      }
+      .mainDiv::after{
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .box{
+        float: left;
+        width: 50%;
+        padding: 50px;
+      }
+      #leftSubDiv1{
+        width: 200px;
+        height: 500px;
+        text-align:left;
+      }
+      #rightSubDiv1{
+        width: 200px;
+        height: 500px;
+        text-align:left;
+      }
+      #rightDiv{
+        width: 200px;
+        height: 500px;
+        margin: 35px 0
+      }
+      #fname{
+        margin-bottom: 20px;
+      }
+      #lname{
+        margin-bottom: 20px;
+      }
+      #city{
+        margin-bottom: 20px;
+      }
+      #zip{
+        margin-bottom: 20px;
+      }
+      #state{
+        margin-bottom: 20px;
+      }
+      #age{
+        margin-bottom: 20px;
+      }
+      #add1{
+        margin-bottom: 20px;
+      }
+      #add2{
+        margin-bottom: 20px;
+      }
+      #verifyB{
+        float: right;
+        margin-right: 50px;
+      }
+      .ErrorMsgs{
+        color: red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Enter Your Shipping Information</h1>
+    <div class="mainDiv">
+        <div class="box" id="leftSubDiv1">
+          First Name <br>
+          <input id="fname" type="text"><br>
+          <span id="fnameErrorMsg" class="ErrorMsgs"></span><br>
+          Address 1 <br>
+          <input id="add1" type="text"><br>
+          <span id="add1ErrorMsg" class="ErrorMsgs"></span><br>
+          City <br>
+          <input id="city" type="text"><br>
+          <span id="cityErrorMsg" class="ErrorMsgs"></span><br>
+          ZIP <br>
+          <input id="zip" type="text">
+          <span id="zipErrorMsg" class="ErrorMsgs"></span><br>
+        </div>
+        <div class="box" id="rightSubDiv1">
+          Last Name <br>
+          <input id="lname" type="text"><br>
+          <span id="lnameErrorMsg" class="ErrorMsgs"></span><br>
+          Address 2 <br>
+          <input id="add2" type="text"><br>
+          <span id="add2ErrorMsg" class="ErrorMsgs"></span><br>
+          State <br>
+          <input id="state" type="text"><br>
+          <span id="stateErrorMsg" class="ErrorMsgs"></span><br>
+          Your Age <br>
+          <input id="age" type="text"><br>
+          <span id="ageErrorMsg" class="ErrorMsgs"></span><br>
+          <button type="button" id="verifyB" onclick="verifyInfo()">verify info</button>
+        </div>
+        <div class="box" id="rightDiv">
+          <p> Write a series of if/else statments. Check to see if the user input validates. If the user input does
+            NOT validate, alert a message show a error message next to each invalid input. </p>
+        </div>
+    </div>
+    <script>
+
+      function verifyInfo()
+      {
+        var input1 = document.getElementById("fname").value;
+        var input1length = input1.length;
+        var input2 = document.getElementById("lname").value;
+        var input2length = input2.length;
+        var input3 = document.getElementById("add1").value;
+        var input3length = input3.length;
+        var input4 = document.getElementById("add2").value;
+        var input4length = input4.length;
+        var input5 = document.getElementById("city").value;
+        var input5length = input5.length;
+        var input6 = document.getElementById("state").value;
+        var input6length = input6.length;
+        var input7 = document.getElementById("zip").value;
+        //var zipCheck = isNan(input7);
+        var input7length = input7.length;
+        var input8 = document.getElementById("age").value;
+        var input8length = input8.length;
+
+        if((input1length >=5) && (input2length >=5) && (input3length >=10) && (input5length >=5)
+        && (input6length==2) && (input7length >= 5) && (input8length >= 2))
+        {
+          verifySuccess();
+        }
+        else
+        {
+          //alert("An error occured");
+          if(input1length < 5)
+          {
+          document.getElementById("fnameErrorMsg").innerHTML = "First name should have at least 5 characters";
+          }
+          else if (input2length < 5 )
+          {
+            document.getElementById("lnameErrorMsg").innerHTML = "Last name should have at least 5 characters";
+          }
+          else if (input3length < 10)
+          {
+            document.getElementById("add1ErrorMsg").innerHTML = "Address1 should have at least 10 characters";
+          }
+          else if (input5length < 5)
+          {
+            document.getElementById("cityErrorMsg").innerHTML = "City should have at least 5 characters";
+          }
+          else if (input6length < 2 || input6length > 2)
+          {
+            document.getElementById("stateErrorMsg").innerHTML = "State should have exactly 2 characters";
+          }
+          else if (input7length < 5)
+          {
+            document.getElementById("zipErrorMsg").innerHTML = "Zip should have at least 5 characters";
+          }
+          //else if (!(zipCheck)) {
+            //document.getElementById("zipErrorMsg").innerHTML = "Zip should only contain numbers";
+          //}
+          else
+          {
+            document.getElementById("ageErrorMsg").innerHTML = "Age should have at least 2 characters";
+          }
+
+        }
+      }
+      function verifySuccess()
+      {
+        alert("Success!!!");
+        document.getElementById("fnameErrorMsg").innerHTML = "";
+        document.getElementById("lnameErrorMsg").innerHTML = "";
+        document.getElementById("add1ErrorMsg").innerHTML = "";
+        document.getElementById("cityErrorMsg").innerHTML = "";
+        document.getElementById("stateErrorMsg").innerHTML = "";
+        document.getElementById("zipErrorMsg").innerHTML = "";
+        document.getElementById("ageErrorMsg").innerHTML = "";
+      }
+
+
+    </script>
+  </body>
+</html>

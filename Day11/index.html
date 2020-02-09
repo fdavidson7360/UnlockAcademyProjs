@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+      #carSection0{
+        float:left;
+        width:  33%;
+      }
+      #carSection1{
+        float:left;
+        width:  33%;
+      }
+      #carSection2{
+        float:right;
+        width:  33%;
+      }
+      .carImages{
+        width: 100%;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h2>Javascript Arrays</h2>
+
+    <p id="Demo"></p>
+    <p id="arrayLength"></p>
+    <h1 id="item1"></h1>
+    <h2 id="item2"></h2>
+    <h3 id="item3"></h3>
+    <script>
+
+      var cars =
+      [
+      "Saab",
+      "Volvo",
+      "BMW"
+      ];
+      //document.getElementById('arrayLength').innerHTML = cars.length + ' cars in array';
+      //document.getElementById('item1').innerHTML = cars[0];
+      //document.getElementById('item2').innerHTML = cars[1];
+      //document.getElementById('item3').innerHTML = cars[2];
+
+      var carImages =
+      [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ4Y_F0JiUDszzBdSkAGeIAnvcVqWt2B57PqYYtWc5hf3a7LA_T",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNYhaxjJ8xB2aiAJDqoWK6n-f2lRzLGOV13ETf_S21AIIr6doq",
+        "images/futuristicBMW.jpeg"
+      ];
+      var carCounter = 0;
+      while(carCounter <= 2)
+      {
+      document.write("<div id ='carSection" + carCounter + "'>");
+      document.write("<h1>" + cars[carCounter] + "</h1>");
+      document.write("<img src ='" + carImages[carCounter] + "' class='carImages'/>");
+      document.write("</div>");
+
+      carCounter++;
+      }
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-color:lightgray;
+      }
+      #mainDiv{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+      }
+      #objSrc{
+        color: blue;
+      }
+      #followUrl{
+        border: 5px doted black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id ="mainDiv">
+      <h1> Javascript Functions and On-click Events </h1>
+
+      <p>On this website I will make use of Javascript Funtions, on-click events i.e. buttons
+     and other Javascript syntax to recreate the wireframe for the homework.</p>
+      <h2 id="objSrc"> Enter a URL for a photo </h2>
+      <input type="url" id="urlSrc" />
+      <br>
+
+      <button type="button" onclick="displayUrl()"> Click to display an image </button>
+      <br>
+      <br>
+      <img id="followUrl" alt="Image not found">
+    </div>
+
+    <script>
+
+      function displayUrl(){
+        var capturedUrl = document.getElementById("urlSrc").value; //get URL of Image
+        document.getElementById("followUrl").src = capturedUrl; //insert an html image tag into src
+      }
+    </script>
+
+  </body>
+</html>

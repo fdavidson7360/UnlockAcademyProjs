@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        background-color: purple;
+      }
+      h1{
+        font-weight: bold;
+        color:yellow;
+        text-align: center;
+      }
+      h2{
+        color: red;
+        text-decoration: underline;
+        float: right;
+      }
+      #AddedAge{
+        border: 2px dotted black;
+        border-radius: 8px;
+      }
+      #SubtractedAge{
+        border: 2px dotted black;
+        border-radius: 8px;
+      }
+      #MultipliedAge{
+        border: 2px dotted black;
+        border-radius: 8px;
+      }
+      #DividedAge{
+        border: 2px dotted black;
+        border-radius: 8px;
+      }
+
+    </style>
+    <title>AgeChanger</title>
+  </head>
+  <body>
+    <h1>Manipulating your Age </h1>
+    <h3 id="AddedAge"> </h3> <br>
+    <h3 id="SubtractedAge"> </h3> <br>
+    <h3 id="MultipliedAge"> </h3> <br>
+    <h3 id="DividedAge"></h3>
+
+    <script>
+
+      var age = prompt("Enter your age");
+      document.write("<h2> Age Entered: " + age + "</h2>");
+      var addTen = parseInt(age)+10;
+      var addedAge = document.getElementById('AddedAge');
+      addedAge.innerHTML = "<h3> Age: ("+ age + ") plus 10: " + addTen + "</h3";
+
+
+      var subtractTen = parseInt(age)-10;
+      var subtractedAge = document.getElementById('SubtractedAge');
+      subtractedAge.innerHTML = "<h3> Age:(" + age + ") subtracted by 10: " + subtractTen + "</h3";
+
+      var multiplyTen = parseInt(age)*10;
+      var multipliedAge = document.getElementById('MultipliedAge');
+      multipliedAge.innerHTML = "<h3> Age:(" + age + ") times 10: " + multiplyTen + "</h3";
+
+      var divideTen = parseInt(age)/10;
+      var dividedAge = document.getElementById('DividedAge');
+      dividedAge.innerHTML = "<h3> Age:(" + age + ") divided by 10: " + divideTen + "</h3";
+
+
+    </script>
+
+  </body>
+</html>

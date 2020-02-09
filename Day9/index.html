@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1{
+        text-align: center;
+      }
+      #containerDiv{
+        float:center;
+      }
+      #leftDiv{
+        background-color: rgb(255, 220, 0);
+        border: 1px solid black;
+        height: 600px;
+        width: 33%;
+        float: left;
+      }
+      #midDiv{
+        background-color: rgb(255, 164, 71);
+        border: 1px solid black;
+        height: 600px;
+        width: 33%;
+        float: left;
+        margin-left: 3px;
+      }
+      #rightDiv{
+        background-color: rgb(125, 164, 71);
+        border: 1px solid black;
+        height: 600px;
+        width: 33%;
+        float: right;
+      }
+      div{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="containerDiv">
+      <div id="leftDiv">
+      <h1>Current Day of the Week</h1>
+      <p id="currentDay"></p>
+      <button class="buttons" id="weekButton" onclick="showDay()">Show Day</button>
+      </div>
+      <div id="midDiv">
+        <h1>Current Month</h1>
+        <p id="currentMonth"></p>
+        <button class="buttons" id="monthButton" onclick="showMonth()">Show Month </button>
+      </div>
+      <div id="rightDiv">
+        <h1>Current Season</h1>
+        <p id="currentSeason"></p>
+        <button class="buttons" id="seasonButton" onclick="showSeason()">Show Season</button>
+      </div>
+    </div>
+    <script>
+      function showDay()
+      {
+        var currentDate = new Date();
+        var currentDay = currentDate.getDay();
+        var currDay = dayAsText(currentDay);
+        document.getElementById("currentDay").innerHTML = currDay;
+      }
+      function dayAsText(currentDay)
+      {
+        if (currentDay == 0)
+        {
+          return "Sunday";
+        }
+        else if (currentDay == 1)
+        {
+            return "Monday";
+        }
+        else if (currentDay == 2)
+        {
+            return "Tuesday";
+        }
+        else if (currentDay == 3)
+        {
+            return "Wednesday";
+        }
+        else if (currentDay == 4)
+        {
+            return "Thursday";
+        }
+        else if (currentDay == 5)
+        {
+            return "Friday";
+        }
+        else if (currentDay == 6)
+        {
+            return "Saturday";
+        }
+      }
+      function showMonth()
+      {
+        var currMonth = new Date();
+        var currentMonth = currMonth.getMonth();
+        var monthAT = monthAsText(currentMonth);
+        //showSeason(currentMonth);
+        document.getElementById("currentMonth").innerHTML = monthAT;
+      }
+      function monthAsText(currentMonth)
+      {
+        if (currentMonth == 0)
+        {
+          return "January";
+        }
+        else if (currentMonth == 1)
+        {
+            return "February";
+        }
+        else if (currentMonth == 2)
+        {
+            return "March";
+        }
+        else if (currentMonth == 3)
+        {
+            return "April";
+        }
+        else if (currentMonth == 4)
+        {
+            return "May";
+        }
+        else if (currentMonth == 5)
+        {
+            return "June";
+        }
+        else if (currentMonth == 6)
+        {
+            return "July";
+        }
+        else if (currentMonth == 7)
+        {
+            return "August";
+        }
+        else if (currentMonth == 8)
+        {
+            return "September";
+        }
+        else if (currentMonth == 9)
+        {
+            return "October";
+        }
+        else if (currentMonth == 10)
+        {
+            return "November";
+        }
+        else if (currentMonth == 11)
+        {
+            return "December";
+        }
+      }
+      function showSeason(currentMonth)
+      {
+        //check to see if month is between December to February (winter)
+        //check to see if month is between March to May (spring)
+        //check to see if month is between June to August (summer)
+        //check to see if month is between September to November (fall)
+        var currentDate = new Date();
+        var currMonth = currentDate.getMonth();
+        var seasonAT = seasonAsText(currMonth);
+        document.getElementById("currentSeason").innerHTML = seasonAT;
+      }
+
+      function seasonAsText(currMonth)
+      {
+        if(currMonth == 11 || currMonth == 0 || currMonth == 1)
+        {
+          return "Winter";
+        }
+        else if (currMonth == 2 || currMonth == 3 || currMonth == 4)
+        {
+            return "Spring";
+        }
+        else if (currMonth == 5 || currMonth == 6 || currMonth == 7)
+        {
+            return "Summer";
+        }
+        else if (currMonth == 8 || currMonth == 9 || currMonth == 10)
+        {
+            return "Fall";
+        }
+      }
+    </script>
+  </body>
+</html>
