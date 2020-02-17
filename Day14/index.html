@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    #mainDiv{
+      float: left;
+    }
+    #secondaryDiv{
+      float:left;
+      height: 200px;
+      width: 200px;
+      margin-left: 150px;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="mainDiv">
+      <img id="imageSrc" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRpe7borkzPEjWPaXKFEar9jAJ4syWszs8RFyKFmn_6L6ij9h0e" alt="Image not found">
+    </div>
+    <div id="secondaryDiv">
+      <br>
+      <br>
+      <label for="widthBox">Insert width (in pixels)</label>
+      <input type="text" id="widthBox">
+      <br>
+      <label for="heightBox">Insert height (in pixels)</label>
+      <input type="text" id="heightBox">
+      <br>
+
+      <button type="button" name="button" width="100" onclick="myFunction()">Update Image Size </button>
+    </div>
+
+    <script>
+      function myFunction()
+      {
+      var widthBox = document.getElementById("widthBox").value;
+      document.getElementById("imageSrc").width = widthBox;
+      var heightBox = document.getElementById("heightBox").value;
+      document.getElementById("imageSrc").height = heightBox;
+      }
+
+
+    </script>
+  </body>
+</html>
