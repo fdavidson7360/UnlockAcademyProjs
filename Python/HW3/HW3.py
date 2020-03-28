@@ -11,16 +11,26 @@ exp_salaries = {"NY": 70000, "CA":70000, "FL":50000, "NC":50000, "TX":60000}
 
 user_exp = input("How many years experience do you have developing software? \n"
                 "[1] Less than a year \n"
-                "[2] 1-3 years of experience \n[3] 3-8 years of experience \n"
+                "[2] 1-3 years of experience \n"
+                "[3] 3-8 years of experience \n"
                 "[4] 3-5 years of experience \n"
                 "[5] 5+ years of experience \n")
+
 try:
     user_exp = int(user_exp)
     if user_exp > 5 or user_exp < 1:
         print("****The user entered a number outside of the 1-5 input range.*****")
-        raise SystemExit
+
 except ValueError:
     print("******** INPUT ERROR: Please enter a valid number for years of learning experience *********")
+    raise SystemExit
+
+age = input("Enter your age \n")
+try:
+    age = int(age)
+except ValueError:
+    print("******** INPUT ERROR: Please enter a valid number for your age *********")
+    raise SystemExit
 
 else:
     usr_coding_langs = input("What languages do you know? (separate each one by a comma): ")
@@ -43,7 +53,7 @@ else:
     number_of_education_years = input("Please enter the number of years you have been learning to code: \n")
 
     usr_info={"dob":dob, "full_name":full_name, "country":country, "state":state,
-              "number_of_education_years":number_of_education_years}
+              "number_of_education_years":number_of_education_years, "age":age}
 
     if user_exp == 1:
         try:
