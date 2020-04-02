@@ -1,10 +1,13 @@
-# ask the user to input their experience by asking them a question using the input() function
+"""
+##### Lesson 4
+Using a For or a While Loop, write the code that will loop over the exp_salaries dictionary
+and print out the state they chose.
+The message should be printed to the console at the end of the progam and should read:
+"Your expected Salary living in key(the state they chose) could have been $ value(the base salary)"
 
-# use an if/elif/else statement to check if the user chose option 1, 2, 3 or 4
-# if the user chose option 1, print out 'Expect between $40,000 and $60,000 for your level of experience'
-# else if the user chose option 2, print out 'Expect between $60,000 and $80,000 for your level of experience'
-# else if the user chose option 3, print out 'Expect between $80,000 and $120,000 for your level of experience'
-# else if the user chose option 4, print out 'Expect at least $130,000 for your level of experience'
+Check to see if the user entered a valid number for a number_of_education_years. If not, raise a value error
+
+"""
 
 valid_states= ("NY", "CA", "FL", "NC", "TX")
 exp_salaries = {"NY": 70000, "CA":70000, "FL":50000, "NC":50000, "TX":60000}
@@ -14,11 +17,10 @@ while True:
                         "[1] Less than a year \n"
                         "[2] 1-3 years of experience \n"
                         "[3] 3-8 years of experience \n"
-                        "[4] 3-5 years of experience \n"
-                        "[5] 5+ years of experience \n")
+                        "[4] 8+ years of experience \n")
 
         user_exp = int(user_exp)
-        if user_exp > 5 or user_exp < 1:
+        if user_exp > 4 or user_exp < 1:
             print("****The user entered a number outside of the 1-5 input range.*****")
 
         usr_coding_langs = input("What languages do you know? (separate each one by a comma): ")
@@ -85,37 +87,13 @@ if user_exp == 1:
         else:
             new_exp_sal = new_exp_sal - 5000
 
-        print("Expect $" + str(new_exp_sal) + " for your level of experience")
+        print("Expect $" + str(new_exp_sal) + " for your level of experience\n")
+
+        for state in exp_salaries:
+            salary = exp_salaries[state]
+            print("Your starting salary living in "+ state + " --> " + "could have been $" + str(salary) +"\n")
 
 elif user_exp == 2:
-    try:
-        exp_sal = exp_salaries[usr_info["state"].upper()]
-        number_of_education_years_as_int = int(number_of_education_years)
-    except KeyError:
-        print("******** INPUT ERROR: Please enter a valid state ********")
-    except ValueError:
-        print("******** INPUT ERROR: Please enter a valid number for years of learning experience *********")
-    else:
-        new_exp_sal = exp_sal - 4000
-
-        if len(usr_coding_langs) < 3:
-            new_exp_sal = new_exp_sal - 10000
-            print("learn some more languages: $10k deducted from expected salary")
-
-        elif len(usr_coding_langs) > 3:
-            new_exp_sal = new_exp_sal + 10000
-            print("$10k added to your expected salary")
-        else:
-            new_exp_sal = new_exp_sal + 5000
-
-        if int(number_of_education_years_as_int) > 3:
-            new_exp_sal = new_exp_sal + 5000
-        else:
-            new_exp_sal = new_exp_sal - 5000
-
-        print("Expect $" + str(new_exp_sal) + " for your level of experience")
-
-elif user_exp == 3:
     try:
         exp_sal = exp_salaries[usr_info["state"].upper()]
         number_of_education_years_as_int = int(number_of_education_years)
@@ -142,6 +120,41 @@ elif user_exp == 3:
             new_exp_sal = new_exp_sal - 5000
 
         print("Expect $" + str(new_exp_sal) + " for your level of experience")
+
+        for key in exp_salaries:
+            print("Your starting salary living in "+ str(key) + " --> " + "could have been $" + str(exp_salaries[key]) +"\n")
+
+elif user_exp == 3:
+    try:
+        exp_sal = exp_salaries[usr_info["state"].upper()]
+        number_of_education_years_as_int = int(number_of_education_years)
+    except KeyError:
+        print("******** INPUT ERROR: Please enter a valid state ********")
+    except ValueError:
+        print("******** INPUT ERROR: Please enter a valid number for years of learning experience *********")
+    else:
+        new_exp_sal = exp_sal + 1000 #Add 1k because they have 3yrs of experience
+
+        if len(usr_coding_langs) < 3:
+            new_exp_sal = new_exp_sal - 10000
+            print("learn some more languages: $10k deducted from expected salary")
+
+        elif len(usr_coding_langs) > 3:
+            new_exp_sal = new_exp_sal + 10000
+            print("$10k added to your expected salary")
+        else:
+            new_exp_sal = new_exp_sal + 5000
+
+        if int(number_of_education_years_as_int) > 3:
+            new_exp_sal = new_exp_sal + 5000
+        else:
+            new_exp_sal = new_exp_sal - 5000
+
+        print("Expect $" + str(new_exp_sal) + " for your level of experience")
+
+        for key in exp_salaries:
+            print("Your starting salary living in "+ str(key) + " --> " + "could have been $" + str(exp_salaries[key]) +"\n")
+
 elif user_exp == 4:
     try:
         exp_sal = exp_salaries[usr_info["state"].upper()]
@@ -151,7 +164,7 @@ elif user_exp == 4:
     except ValueError:
         print("******** INPUT ERROR: Please enter a valid number for years of learning experience *********")
     else:
-        new_exp_sal = exp_sal - 2000
+        new_exp_sal = exp_sal + 5000 #Add 5k because the user has 4+ yrs of experience
 
         if len(usr_coding_langs) < 3:
             new_exp_sal = new_exp_sal - 10000
@@ -169,32 +182,10 @@ elif user_exp == 4:
             new_exp_sal = new_exp_sal - 5000
 
         print("Expect $" + str(new_exp_sal) + " for your level of experience")
-elif user_exp == 5:
-    try:
-        exp_sal = exp_salaries[usr_info["state"].upper()]
-        number_of_education_years_as_int = int(number_of_education_years)
-    except KeyError:
-        print("******** INPUT ERROR: Please enter a valid state ********")
-    except ValueError:
-        print("******** INPUT ERROR: Please enter a valid number for years of learning experience *********")
-    else:
-        new_exp_sal = exp_sal - 1000
 
-        if len(usr_coding_langs) < 3:
-            new_exp_sal = new_exp_sal - 10000
-            print("learn some more languages: $10k deducted from expected salary")
+        for key in exp_salaries:
+            print("Your starting salary living in "+ str(key) + " --> " + "could have been $" + str(exp_salaries[key]) +"\n")
 
-        elif len(usr_coding_langs) > 3:
-            new_exp_sal = new_exp_sal + 10000
-            print("$10k added to your expected salary")
-        else:
-            new_exp_sal = new_exp_sal + 5000
 
-        if int(number_of_education_years_as_int) > 3:
-            new_exp_sal = new_exp_sal + 5000
-        else:
-            new_exp_sal = new_exp_sal - 5000
-
-        print("Expect $" + str(new_exp_sal) + " for your level of experience")
 else:
-    print("The user entered a number outside of the 1-5 input range.")
+    print(10 * "*" + "Sorry. Please enter one of the valid options" + 10 * "*")
