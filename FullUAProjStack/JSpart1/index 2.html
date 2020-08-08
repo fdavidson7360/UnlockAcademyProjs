@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #mainDiv{
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="mainDiv">
+      <p id="demo"></p>
+      <h3>Enter a color in the input box and click the button below to change the background color.</h3>
+      <input id="colorBox" type="text">
+      <button type="button" onclick="colorClick()"> Cick for color change </button>
+    </div>
+
+
+    <script>
+      function colorClick()
+      {
+        var color = document.getElementById("colorBox").value;
+
+        //document.getElementById("demo").innerHTML = color;
+        switch (color)
+        {
+          case 'yellow':
+            document.body.style.background = color;
+            break;
+          case 'blue':
+            document.body.style.background = color;
+            break;
+          case 'black':
+            document.body.style.background = color;
+            break;
+          case 'green':
+            document.body.style.background = color;
+            break;
+          default:
+          document.body.style.backgroundColor = "red";
+
+        }
+      }
+    </script>
+  </body>
+</html>
