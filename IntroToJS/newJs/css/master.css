@@ -1,0 +1,390 @@
+@use postcss-custom-media;
+@use postcss-nested;
+
+
+/* Font import */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+
+/* Media query */
+@custom-media --min-sm (width >= 768px);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* html,
+body {
+  height: 100%;
+} */
+
+/* body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+
+/*________________________________________________ */
+
+.navigation {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+
+  @media (--min-sm) {
+    flex-direction: row;
+  }
+}
+
+.menu > li {
+  @media (--min-sm) {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+}
+
+.menu a {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 300;
+  color: #666;
+  transition: color .2s ease;
+  padding: 3px 0;
+  margin-bottom: 15px;
+
+  &:hover {
+    color: #aaa;
+
+    &::after,
+    &::before {
+      width: 100%;
+      left: 0;
+    }
+
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 0;
+    right: 0;
+    height: 3px;
+  }
+
+  &::before {
+    transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+    background: #2196f3;
+  }
+
+  &::after {
+    transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+    background: #F44336;
+  }
+}
+
+
+
+
+body{
+  /* font-family: 'Roboto', sans-serif;
+ display: flex;
+ align-items: center;
+ justify-content: center; */
+
+
+
+  background-color: #2C3A48;
+  margin: 0px;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 0px;
+}
+#navWrapper{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  background-color: #1C2634;
+  color: white;
+}
+#innerContainer{
+  display: flex;
+  flex-direction: row;
+  height: 99999%
+}
+#divider{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 150px;
+  /* border-right: .5px solid grey; */
+}
+#navContent{
+  display: flex;
+  flex-direction: column;
+
+}
+
+#logoImage{
+  width: 30%;
+  /* padding-left: 105px; */
+}
+/* #navLinks{
+  list-style-type: none;
+  text-align: center;
+} */
+#mainWrapper{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 2%;
+  margin-top: 2%;
+  /* border:1px solid white; */
+  /* justify-content: stretch;
+  background-color: white;
+   padding-left: 20px; */
+}
+#greetingWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  background-color: white;
+  width: 100%;
+  /* padding-left: 10px;
+  padding-bottom: none; */
+}
+#greetingTag{
+  color: red;
+}
+#greetingDiv{
+  padding-left: 15px;
+  color: black;
+}
+.redHorizontalRule{
+  background-color: red;
+  height:2px;
+  width: 30px;
+  border: none;
+  margin: 0;
+}
+#headshotDiv{
+  /* text-align: right; */
+  /* width: 20% */
+  padding-left: 35%;
+}
+#headshotImage{
+  width: 50%;
+  height: 100%;
+  /* margin-left: 20%; */
+  /* padding: 10px; */
+  /* height: 150x; */
+}
+#theTechCoachHeading{
+  font-size: 12px;
+}
+/* #moreInfoWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  background-color: white;
+  width: 50%;
+} */
+/* #resumeDiv{
+  color: white;
+  background-color: red;
+  padding: 20px;
+  width:50%;
+  text-align: center;
+} */
+/* #portfolioDiv{
+  color: white;
+  background-color: #1C2634;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+} */
+
+#viewAssestsWrapper{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  /* justify-content: stretch; */
+  width: 100%;
+
+}
+
+#viewResumeButton{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: red;
+  padding: 10px;
+  line-height: 30px;
+  text-align: center;
+  flex-basis: 50%;
+}
+#viewPortfolioButton{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: #1C2634;
+  padding: 10px;
+  line-height: 30px;
+  text-align: center;
+  flex-basis: 50%;
+}
+#overviewDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    background-color: white;
+    width: 100%;
+    color: black;
+    padding-left: 10px;
+}
+
+#aboutUsWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  background-color: white;
+  width: 100%;
+  color: black;
+}
+#aboutDiv
+{
+  padding-left: 10px;
+}
+#moto{
+  color: red;
+}
+#skillsTag{
+  padding-left: 10px;
+}
+#statsDiv{
+  display: flex;
+  flex-direction: row;
+  border: 0.5rem outset red;
+  border-radius: 12px;
+  margin: 2rem;
+  /* padding: 1rem; */
+  /* padding: 10px; */
+  /* text-align:l right; */
+  /* width: 20% */
+  /* padding-left: 35%; */
+}
+#leftDiv{
+  display: flex;
+  flex-direction: column;
+  color: black;
+  /* background-color: red; */
+  padding: 30px;
+  /* line-height: 30px;
+  text-align: center; */
+  /* justify-content: space-between; */
+  flex-basis: 50%;
+}
+#rightDiv{
+  display: flex;
+  flex-direction: column;
+  color: black;
+  /* background-color: #1C2634; */
+  padding: 30px;
+  /* line-height: 30px;
+  text-align: center; */
+  justify-content: space-between;
+  flex-basis: 50%;
+}
+/* .progressSpanPercent{
+  text-align: right;
+  font-size: 10px;
+  padding-right: 20%;
+}
+.progressSpan{
+  text-align: left;
+  font-size: 10px;
+} */
+.leftText{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* flex-basis: 100%; */
+}
+.rightText{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* .barColor{
+  background-color: red;
+} */
+/* #innerLeft{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+#innerRight{
+  display: flex;
+  flex-direction: column;
+} */
+#developmentProgress{
+  display: flex;
+  flex-direction: row;
+  /* flex-basis: 100%; */
+}
+#brandProgress{
+  display: flex;
+  flex-direction: row;
+}
+#marketingProgress{
+  display: flex;
+  flex-direction: row;
+}
+#socialMediaProgress{
+  display: flex;
+  flex-direction: row;
+}
+/* #aboutUsWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  background-color: white;
+  width: 50%;
+} */
+/* #aboutDiv{
+   display: flex; comment out
+   flex-direction: row; comment out
+   justify-content: stretch; comment out
+  background-color: white;
+  width:50%; comment
+  padding-left: 15px;
+   padding-left: 10px; comment out
+} */
+
+
+span{
+  font-size: 15px;
+}
