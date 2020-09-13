@@ -1,0 +1,40 @@
+Profession:1
+Years of experience:2
+List of coding languages:['css', ' java', ' c++']
+Design tools:['canva', ' gimp', ' adobe']
+Profession:1
+Years of experience:2
+List of coding languages:['css', ' java', ' c++']
+Design tools:['canva', ' gimp', ' adobe']
+Profession:1
+Years of experience:2
+List of coding languages:['css', ' java', ' c++']
+Design tools:['canva', ' gimp', ' adobe']
+Profession:1
+Years of experience:2
+List of coding languages:['css', ' java', ' c++']
+Design tools:['canva', ' gimp', ' adobe']
+Profession:1
+Years of experience:2
+List of coding languages:['css', ' c++', ' java']
+Design tools:['adobe', ' gimp']
+Profession:1
+Years of experience:2
+List of coding languages:['css', ' c++', ' java']
+Design tools:['adobe', ' gimp']
+Profession:1
+Years of experience:2
+List of coding languages:['java', ' css', ' c++']
+Design tools:['gimp', ' canva', ' adobe']
+Profession:1
+Years of experience:2
+List of coding languages:['java', ' css', ' c++']
+Design tools:['gimp', ' canva', ' adobe']
+Profession:1
+Years of experience:2
+List of coding languages:['java', ' css', ' c++']
+Design tools:['gimp', ' canva', ' adobe']
+Profession:1
+Years of experience:1
+List of coding languages:['java', ' css', ' c++ ']
+Design tools:['gimp', ' canva', ' adobe']

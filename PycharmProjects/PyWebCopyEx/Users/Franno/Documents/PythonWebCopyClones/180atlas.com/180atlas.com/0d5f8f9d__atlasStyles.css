@@ -1,0 +1,348 @@
+@font-face {
+    font-family: airAmericana;
+    src: url(%27fonts/air_americana/191f57d8__air_americana.ttf%27);
+}
+
+@font-face {
+    font-family: walkwayBold;
+    src: url(%27fonts/walkway/4de24f5e__walkway_bold.ttf%27);
+}
+
+  .air_americana{
+    font-family: airAmericana;
+  }
+  .walkway_bold{
+    font-family: walkwayBold;
+  }
+
+  body {
+    font-family: walkwayBold;
+    color:white;
+  }
+
+  .yellowFont{
+    color:#e2db1b;
+  }
+  .purpleFont{
+    color:#5f0675;
+  }
+  .pinkFont{
+    color:#f7006d;
+  }
+  .darkBlueFont{
+    color:#15003f;
+  }
+
+  @media (max-width: 600px) {
+
+    @keyframes rotateHashmarks {
+        0%   { 
+          -ms-transform: rotate(3deg); /* IE 9 */
+          -webkit-transform: rotate(3deg); /* Safari 3-8 */
+          transform: rotate(3deg);
+        }
+      25%  {
+        -ms-transform: rotate(17deg); /* IE 9 */
+          -webkit-transform: rotate(17deg); /* Safari 3-8 */
+          transform: rotate(17deg);
+
+      }
+
+      50%  {
+        -ms-transform: rotate(35deg); /* IE 9 */
+          -webkit-transform: rotate(35deg); /* Safari 3-8 */
+          transform: rotate(35deg);
+
+      }
+
+      75%  {
+        -ms-transform: rotate(40deg); /* IE 9 */
+          -webkit-transform: rotate(40deg); /* Safari 3-8 */
+          transform: rotate(40deg);
+
+      }
+      100%  {
+        -ms-transform: rotate(50deg); /* IE 9 */
+          -webkit-transform: rotate(50deg); /* Safari 3-8 */
+          transform: rotate(50deg);
+
+      }
+
+    }
+
+    @keyframes innerCircleAnimation {
+        0%   { 
+         opacity:.7
+        }
+      25%  {
+        opacity:.8
+      }
+      100%  {
+        opacity:1
+      }
+    }
+
+    
+    /* http://waitanimate.wstone.io/#!/#%2F   */
+    @keyframes bounce_animation {
+      0% { transform:translateY(0) }
+      1.72414% { transform:translateY(0) }
+      3.44828% { transform:translateY(0) }
+      6.89655% { transform:translateY(-15px) }
+      8.62069% { transform:translateY(0) }
+      10.34483% { transform:translateY(-15px) }
+      13.7931% { transform:translateY(0) }
+      100% { transform:translateY(0) }
+    }
+
+    @keyframes colorChangingFont {
+      0%   { 
+        color: #e2db1b;
+        /* border:1px solid #e2db1b; */
+
+      }
+      25%  {
+        color: #f7006d;
+        /* border:1px solid #f7006d; */
+
+      }
+      50%  {
+        color:#e2db1b;
+        /* border:1px solid #e2db1b; */
+
+      }
+      75%  {
+        color: #e2db1b;
+        /* border:1px solid #e2db1b; */
+
+      }
+      100%  {
+        color: #f7006d;
+        /* border:1px solid #f7006d; */
+
+      }
+    }
+
+    .bounce {
+      animation: bounce_animation 11.6s ease infinite;
+      transform-origin: 50% 50%;
+    }
+
+    .colorChangingFont{
+      animation-name: colorChangingFont;
+      animation-duration: 4s;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+
+    body{
+      background: url(%27images/a863ec4e__purpleBackground.png%27) 100% 100%;
+    }
+    .atlas_icons{
+      width:50px
+    }
+    #northIcon{
+      animation-delay: 2s;
+    }
+   
+    #eastIcon{
+      animation-delay: 5s;
+    }
+    #southIcon{
+      animation-delay: 8s;
+    }
+    #westIcon{
+      animation-delay: 11s;
+    }
+
+    #emailUs{
+      display:none;
+    }
+    
+    #compassExplanation{
+      /* display:none; */
+      float:clear;
+    }
+
+    #whoIsAtlas{
+      /* font-size:1em; */
+    }
+
+    #compassSection{
+        height: 800px;
+    }
+
+    #compassWrapper{
+        margin-top:10%;
+    }
+
+    .linkToForm{
+      color:#e2db1b;
+    }
+    #northWrapper{
+      text-align:center;
+    }
+
+    #middleWrapper{
+      margin-top:10%;
+    }
+
+
+    #westWrapper{
+      text-align: right;
+    }
+
+    #circlesWrapper {
+    }
+
+    #compass_3d_circle{
+      
+    }
+    .center_circles2{
+      width: 161px;
+      position: absolute;
+      left: -14px;
+      top: -36px;
+    }
+
+    #compass_3d_inner_circle{
+      width: 70px;
+      position: absolute;
+      left: 31px;
+      top: -15px;
+
+      animation-name: innerCircleAnimation;
+      animation-duration: 2s;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+      
+      animation-iteration-count: infinite;
+      z-index: 990;
+
+    }
+
+    #compass_3d_hashmarks{
+      animation-name: rotateHashmarks;
+      animation-duration: 4s;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+    }
+
+    #eastWrapper{
+      text-align: left;
+      padding-left: 25px;
+    }
+
+    #southWrapper{
+      margin-top:7%;
+      text-align: center;
+    }
+    #southWrapper img{
+       width: 75px
+    }
+
+    .overviewIcons{
+      width:30px;
+    }
+
+    .directionOverview{
+        position: fixed;
+        margin:0px;
+        padding:5%;
+        margin-top:0%;
+        top:0;
+        left:6%;
+        width:85%;
+        height:150px;
+        text-align:center;
+        border-left:5px solid white;
+        border-right:5px solid white;
+        z-index: 960;
+        font-size: 1em;
+
+    }
+    .exitOverview{
+        position: fixed;
+        margin:0px;
+        padding:3%;
+        margin-top:1%;
+        top:0;
+        right:6%;
+        width:15%;
+        height:50px;
+        text-align:center;
+        z-index: 961;
+
+    }
+
+    #eastOverview{
+
+      /* position: fixed;
+        margin:0px;
+        padding:5%;
+        margin-top:5%;
+        top:0;
+        left:6%;
+        width:85%;
+        height:150px;
+        text-align:center;
+        border-left:5px solid white;
+        border-right:5px solid white;
+        z-index: 960; */
+
+        /* position: fixed;
+        margin:50px;
+        top:220px;
+        left:60%;
+        z-index: 999; */
+    }
+
+    #westOverview{
+        /* position: fixed;
+        margin:50px;
+        top:220px;
+        left:0%;
+        z-index: 999; */
+    }
+    .popupHeader{
+      font-size:1.3em;
+    }
+    .popupTitle{
+      font-size:.7em;
+    }
+
+    .quoteButton{
+      padding:10px;
+      border:1px solid #f7006d;
+      background:white;
+
+    }
+
+    #opaqueBackground {
+        position: fixed; 
+        background-color: black;
+
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding:0;
+        opacity: .6;
+    }
+
+    #learnMore{
+      padding:5px;
+      border:1px solid #f7006d;
+      border-radius:3px;
+    }
+  }
+
+/*!
+* AerWebCopy Engine [version 6.3.0]
+* Copyright Aeroson Systems & Co.
+* File mirrored from https://180atlas.com/atlasStyles.css
+* At UTC time: 2020-06-22 07:37:19.977025
+*/

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Styles by Fran</title>
+    <!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="static/images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <!--===============================================================================================-->
+  </head>
+  </head>
+  <body>
+  <div class="bg-contact3" style="background-image: url('static/images/bg-01.jpg');">
+    <div class="container-contact3">
+      <div class="wrap-contact3">
+         <form class="form-horizontal" action="/calculate_salary" method="POST">
+          <fieldset>
+
+          <!-- Form Name -->
+          <legend>Schedule and Appointment</legend>
+
+          <!-- Select Basic -->
+          <div class="form-group">
+            <label class="col-md-8 control-label" for="selectbasic">Best Day for Appointment</label>
+            <div class="col-md-8">
+              <select id="selectbasic" name="appDay" class="form-control">
+                <option value="1">Sunday</option>
+                <option value="2">Monday</option>
+                <option value="3">Tuesday</option>
+                <option value="4">Wednesday</option>
+                <option value="5">Thursday</option>
+                <option value="6">Friday</option>
+                <option value="7">Saturday</option>
+              </select>
+            </div>
+          </div>
+
+            <!--Modified time values to match my time dictionary -->
+          <!-- Select Basic -->
+          <div class="form-group">
+            <label class="col-md-8 control-label" for="appointment">Best Time for Appointment</label>
+            <div class="col-md-8">
+              <select id="appointment" name="appTime" class="form-control">
+                <option value="8:00 am">8:00 am</option>
+                <option value="9:00 am">9:00 am</option>
+                <option value="10:00 am">10:00 am</option>
+                <option value="11:00 am">11:00 am</option>
+                <option value="12:00 pm">12:00 pm</option>
+                <option value="1:00 pm">1:00 pm</option>
+                <option value="2:00 pm">2:00 pm</option>
+                <option value="3:00 pm">3:00 pm</option>
+                <option value="4:00 pm">4:00 pm</option>
+                <option value="5:00 pm">5:00 pm</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-8 control-label" for="textinput">What Service you need done</label>
+            <div class="col-md-8">
+            <input id="textinput" name="serviceType" type="text" placeholder="type a service" class="form-control input-md">
+            <br>
+            <span class="help-block">(options: New Locs, Retwist or Finger Waves)</span>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-8 control-label" for="singlebutton"></label>
+            <div class="col-md-8">
+              <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+
+          </fieldset>
+          </form>
+      </div>
+    </div>
+  </div>
+
+  <!--===============================================================================================-->
+	<script src="static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/bootstrap/js/popper.js"></script>
+	<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="static/js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+  </body>
+</html>

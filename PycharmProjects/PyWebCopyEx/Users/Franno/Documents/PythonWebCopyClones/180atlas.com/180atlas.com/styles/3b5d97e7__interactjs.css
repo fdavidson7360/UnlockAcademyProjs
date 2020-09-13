@@ -1,0 +1,91 @@
+
+#drag-1, #drag-2 {
+    width: 25%;
+    height: 100%;
+    min-height: 6.5em;
+    margin: 10%;
+  
+    background-color: #29e;
+    color: white;
+  
+    border-radius: 0.75em;
+    padding: 4%;
+  
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  
+    -ms-touch-action: none;
+    touch-action: none;
+  }
+  
+  #drag-me::before {
+    content: "#" attr(id);
+    font-weight: bold;
+  }
+  
+  #outer-dropzone {
+    height: 140px;
+  }
+  
+  #inner-dropzone {
+    height: 80px;
+  }
+  
+  .dropzone {
+    background-color: #ccc;
+    border: dashed 4px transparent;
+    border-radius: 4px;
+    margin: 10px auto 30px;
+    padding: 10px;
+    width: 80%;
+    transition: background-color 0.3s;
+  }
+  
+  .drop-active {
+    border-color: #aaa;
+  }
+  
+  .drop-target {
+    background-color: #29e;
+    border-color: #fff;
+    border-style: solid;
+  }
+  
+  .drag-drop {
+    display: inline-block;
+    min-width: 40px;
+    padding: 2em 0.5em;
+  
+    color: #fff;
+    /* background-color: #29e;
+    border: solid 2px #fff;
+   */
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  
+    transition: background-color 0.3s;
+  
+    -ms-touch-action: none;
+    touch-action: none;
+  }
+  
+  .drag-drop.can-drop {
+    color: #000;
+    background-color: #4e4;
+  }
+  
+  #compass_3d_inner_circle{
+    animation-name: innerCircleAnimation;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+   
+
+}
+/*!
+* AerWebCopy Engine [version 6.3.0]
+* Copyright Aeroson Systems & Co.
+* File mirrored from https://180atlas.com/styles/interactjs.css
+* At UTC time: 2020-06-22 07:37:20.412107
+*/

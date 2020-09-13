@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Final Project</title>
+    <link href="static/style.css" rel="stylesheet" type="text/css"/>
+​
+    <style>
+      p{
+        display:none;
+      }
+      h1{
+        font-size:1.1em;
+      }
+      body{
+        width:50%;
+        margin:auto;
+      }
+      label{
+        font-size:1.8em;
+        padding-top:15px
+      }
+      .form-group{
+        margin-bottom:20px;
+      }
+​
+​
+​
+    </style>
+</head>
+<body>
+​
+<form action="/schedule_app" class="form-horizontal" method="POST">
+    <fieldset>
+​
+        <!-- Form Name -->
+        <legend>Schedule an Appointment</legend>
+​
+        <!-- Select Basic -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="weekday">Best Day for Appointment</label>
+            <div class="col-md-4">
+                <select id="weekday" name="day_appt" class="form-control">
+                    <option value="1">Sunday</option>
+                    <option value="2">Monday</option>
+                    <option value="3">Tuesday</option>
+                    <option value="4">Wednesday</option>
+                    <option value="5">Thursday</option>
+                    <option value="6">Friday</option>
+                    <option value="7">Saturday</option>
+                </select>
+            </div>
+        </div>
+​
+        <!-- Select Basic -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="appointment">Best Time for Appointment</label>
+            <div class="col-md-4">
+                <select id="appointment" name="time_appt" class="form-control">
+                    <option value="8:00">8:00 am</option>
+                    <option value="9:00 am">9:00 am</option>
+                    <option value="10:00 am">10:00 am</option>
+                    <option value="11:00 am">11:00 am</option>
+                    <option value="12:00 pm">12:00 pm</option>
+                    <option value="1:00 pm">1:00 pm</option>
+                    <option value="2:00 pm">2:00 pm</option>
+                    <option value="3:00 pm">3:00 pm</option>
+                    <option value="4:00 pm">4:00 pm</option>
+                    <option value="5:00 pm">5:00 pm</option>
+                </select>
+            </div>
+        </div>
+​
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="service">What would you like to book an appointment
+                for?</label>
+            <div class="col-md-4">
+                <input id="service" name="serviceType" type="text" placeholder="Type a service"
+                       class="form-control input-md">
+                <br>
+                <span class="help-block">(options: New Locs, Retwists, or Faux Locs)</span>
+            </div>
+        </div>
+​
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="singlebutton"></label>
+            <div class="col-md-4">
+                <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Book Appointment
+                </button>
+            </div>
+        </div>
+​
+    </fieldset>
+</form>
+​
+​
+</body>
+</html>
