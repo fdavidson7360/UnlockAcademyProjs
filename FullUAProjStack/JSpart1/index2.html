@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <style>
+    body{
+      background-color: lightgray;
+
+    }
+    #obj{
+      color: maroon;
+    }
+    #followURL{
+      border: 5px dotted black;
+    }
+    #adjustmentDIV{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+
+   </style>
+ </head>
+ <body>
+   <div id="adjustmentDIV">
+   <h1> Javascript Funtions and On-click Events </h1>
+
+   <p> On this website I will make use of Javascript Funtions, on-click events i.e. buttons
+     and other Javascript syntax to recreate the wireframe for the homework.</p>
+
+    <h2 id="obj">  Enter a URL to a photo </h2>
+
+   <input type="url" id="url" />
+   <!--value=“www.google.com“/> -->
+   <br>
+
+   <button type=“button” onclick="displayURL()"> Click To Display Image Below </button>
+   <br>
+   <br>
+
+   <img id="followURL" alt="Image not found" height="1500" width="1500">
+ </div>
+
+   <script>
+
+   function displayURL(){
+     var capturedURL = document.getElementById("url").value; //get URL from a text box
+     document.getElementById("followURL").src = capturedURL;  //insert into src of an image tag in html
+   }
+   </script>
+
+
+ </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body{
+      background-color:pink;
+    }
+    h1{
+      text-align: center;
+      border-style: dotted;
+    }
+    p{
+      text-align: center;
+    }
+    #Productlabel{
+      text-align: center;
+      color: blue;
+      text-decoration: underline;
+    }
+    #Quantitylabel{
+      text-align: center;
+      color: blue;
+      text-decoration: underline;
+    }
+    #TAlabel{
+      text-align: center;
+      color: blue;
+      text-decoration: underline;
+    }
+    #parent_div_1, #parent_div_2, #parent_div_3{
+      //width: 30%;
+    width:400px;
+  height:500px;
+    border:3px solid purple;
+    margin-left: 5px;
+    margin-right:5px;
+    float:left;
+  }
+  #child_div_1,#child_div_2{
+    text-align: center;
+  }
+  #child_subdiv_1,#child_subdiv_2,#child_subdiv_3{
+    //padding-top: 25px;
+    text-align: center;
+    width: 300px;
+    height:45px;
+  }
+  #TotalArea{
+    text-align: center;
+  }
+  #TotCos{
+    color: blue;
+  }
+  input[type=text], select {
+  width: 75%;
+  padding: 6px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+  </style>
+</head>
+  <body>
+    <h1>Calculating Total Cost Using Javascript</h1>
+    <div id='parent_div_1'>
+    <h2 id="Productlabel"> Products Offered </h2>
+    <br>
+    <div id='child_div_1'>
+      <h2>Product #1: Shirts</h2>
+      <h2>Product #2: Pants</h2>
+      <h2>Product #3: Shoes</h2>
+    </div>
+    </div>
+    <div id='parent_div_2'>
+      <h2 id="Quantitylabel">Quantity</h2>
+      <div id='child_subdiv_1'>
+        <input type="text" id="prod1" placeholder="Enter the number of shirts ordered..."/>
+      </div>
+       <div id='child_subdiv_2'>
+         <input type="text" id="prod2" placeholder="Enter the number of pants ordered..."/>
+       </div>
+       <div id='child_subdiv_3'>
+         <input type="text" id="prod3" placeholder="Enter the number of shoes ordered..."/>
+       </div>
+       <div id="TotalArea">
+      <button type="button" onclick="getQuantity()">Add Total</button>
+      </div>
+        <p id="TotCos"> </p>
+    </div>
+    <div id='parent_div_3'>
+      <h2 id="TAlabel"> Pricing </h2>
+      <p> Calculate the total cost of the products. </p>
+      <div id='child_div_2'>
+        <h2>Product #1 = $20/each</h2>
+        <h2>Product #2 = $30/each</h2>
+        <h2>Product #3 = $50/each</h2>
+      </div>
+    </div>
+
+    <script>
+      function getQuantity(){
+        var numShirts = parseInt(document.getElementById("prod1").value);
+        var numPants = parseInt(document.getElementById("prod2").value);
+        var numShoes = parseInt(document.getElementById("prod3").value);
+        //var TotQuantity = shirts+pants+shoes;
+        var TotalValue = getTotalCost(numShirts,numPants,numShoes);
+        document.getElementById("TotCos").innerHTML = "Your Total Cost is $" + TotalValue;
+        //alert(TotCos);
+      }
+
+      function getTotalCost(numShirts,numPants,numShoes){
+        var TotCos = (numShirts*20)+(numPants*30)+(numShoes*50);
+        return TotCos;
+      }
+    </script>
+
+  </body>

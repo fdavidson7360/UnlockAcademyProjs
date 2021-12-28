@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1{
+        color: solid black;
+      }
+      #answer1{
+        font-size: 10px;
+        color: blue;
+        border: 5px solid black;
+      }
+      #answer2{
+        font-size: 10px;
+        color: blue;
+        border: 5px solid black;
+      }
+      #answer3{
+        font-size: 10px;
+        color: blue;
+        border: 5px solid black;
+      }
+      #answer4{
+        font-size: 10px;
+        color: blue;
+        border: 5px solid black;
+      }
+    #logo{
+      color: black;
+      border: none;
+      text-decoration:none;
+      text-align: left;
+    }
+    h2{
+      text-align: right;
+      color: red;
+      text-decoration: underline;
+    }
+
+    </style>
+  </head>
+  <body>
+    <h2 id ="logo" >Manipulating Your Age</h2>
+    <h3 id="answer1"> </h3> <br>
+    <h3 id="answer2"> </h3> <br>
+    <h3 id="answer3"> </h3> <br>
+    <h3 id="answer4"> </h3>
+    <script>
+
+      var age = prompt("How old are you?");
+      document.write("<h2> If age = " + age + "</h2>");
+      var YourAgePlus10 = parseInt(age) + 10;
+      var YourAgeMinus10 = parseInt(age) - 10;
+      var YourAgeTimes10 = parseInt(age) * 10;
+      var YourAgeDividedBy10 = parseInt(age) / 10;
+
+      var answerElement1 = document.getElementById("answer1");
+      var answerElement2 = document.getElementById("answer2");
+      var answerElement3 = document.getElementById("answer3");
+      var answerElement4 = document.getElementById("answer4");
+
+      answerElement1.innerHTML = "<h1> Your age plus 10: " + YourAgePlus10 +"</h1>";
+      answerElement2.innerHTML = "<h1> Your age minus 10: " + YourAgeMinus10 +"</h1>";
+      answerElement3.innerHTML = "<h1> Your age times 10: " + YourAgeTimes10 +"</h1>";
+      answerElement4.innerHTML = "<h1> Your age divided by 10: " + YourAgeDividedBy10 +"</h1>";
+    </script>
+
+
+  </body>
+</html>

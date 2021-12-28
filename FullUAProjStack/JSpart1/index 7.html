@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    </style>
+  </head>
+  <body>
+    <h1> Javascript Funtions and On-click Events </h1>
+
+    <p> On this website I will make use of Javascript Funtions, on-click events i.e. buttons
+      and other Javascript syntax to recreate the wireframe for the homework.</p>
+
+    <input type="url" id = "url" />
+    <!--value="www.google.com"/> -->
+    <br>
+
+    <button type="button" onclick="displayURL()"> Click To Display Image Below </button>
+
+    <img id = "followURL" alt="Image not found">
+
+    <script>
+
+    function displayURL(){
+      var capturedURL = document.getElementById("url").value; //get URL from a text box
+    document.getElementById("followURL").src = capturedURL;  //insert into src of an image tag in html
+    }
+    </script>
+
+
+  </body>
+</html>
