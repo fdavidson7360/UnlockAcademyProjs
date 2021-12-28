@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #imageDiv {
+        float: left;
+        margin: 50px;
+    }
+    
+    #sizingDiv {
+        float: left;
+        margin: 50px;
+    }
+    
+    input[type=text] {
+        width: 100%;
+        padding: 20px 20px;
+        margin: 40px 0px;
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+    <div id="mainContainer" class="d-flex flex-row">
+        <div id="imageDiv">
+            <img id="myPhoto" src="https://image.shutterstock.com/image-photo/african-woman-enjoying-seashore-scarf-600w-698848111.jpg" alt="">
+        </div>
+        <div id="sizingDiv" class="d-flex flex-column">
+            <h2>Enter a height and width to change the image to</h2>
+            <div class="p-2">
+                <label for="width">Insert Width (in pixels) </label>
+                <input type="text" id="imgwidth" name="width">
+            </div>
+
+            <div class="p-2">
+                <label for="height">Insert Height (in pixels)</label>
+                <input type="text" id="imgheight" name="height">
+            </div>
+
+            <div class="p-2">
+                <button onclick="myfunction()">Submit</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function myfunction() {
+            var imgWidth = document.getElementById("imgwidth").value;
+            var imgHeight = document.getElementById("imgheight").value;
+            var photoChanged = document.getElementById("myPhoto");
+            photoChanged.style.width = imgWidth;
+            photoChanged.style.height = imgHeight;
+        }
+    </script>
+</body>
+
+</html>
