@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: 'Brush Script MT', cursive; font-size: 30px;} /*TODO Change back ground color*/
+* {box-sizing: border-box;}
+
+.bg-img {
+  /* The image used */
+  background-image: url("./images/pexels-steve-johnson-963056.jpg");
+
+  min-height: 400px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  margin: 20px;
+  width: auto;
+  float: right;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #13B5DB;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.mainProductDiv{
+  float: left;
+  padding: 14px 16px;
+}
+.secondBestProductDiv{
+  float: left;
+  padding: 14px 16px;
+}
+.thirdProductDiv{
+  float: left;
+  padding: 14px 16px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  /* border-radius: 50%; */
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+ .fa-facebook {
+  /* background: #3B5998; */
+  color: white;
+}
+
+.fa-google {
+  /* background: #dd4b39; */
+  color: white;
+}
+
+.fa-linkedin {
+  /* background: #007bb5; */
+  color: white;
+}
+
+.fa-youtube {
+  /* background: #bb0000; */
+  color: white;
+}
+
+.fa-github {
+  /* background: white; */
+  color: white;
+}
+
+.productPages {
+  padding: 20px;
+  font-size: 30px;
+  width: 25px;
+  text-align: center;
+  color: white;
+}
+
+.socialMediaLinks {
+  float: right;
+  color: white;
+}
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.footer {
+   /* position: fixed; */
+   margin-top: auto;
+   /* left: 0;
+   bottom: 0;
+   width: 100%; */
+   background-color: #13B5DB;
+   /* color: white; */
+   /* text-align: center; */
+}
+</style>
+</head>
+<body>
+
+<div class="contentContainer">
+
+  <!-- <h2>Navbar & Hero Image on Image</h2> -->
+  <div class="bg-img">
+    <div class="container">
+      <!-- <h2 style="font-size:40pt float:left">The Forgotten Ones</h2> -->
+      <div class="topnav">
+        <a href="./pages/ContactUs.html">Contact</a>
+        <a href="./pages/About.html">About</a>
+      </div>
+    </div>
+    <h2 style="font-size:35pt; padding-left:30px; color:#13B5DB"><u>The Forgotten Ones</u></h2>
+  </div>
+  <!-- Opening Statement Div -->
+  <div class="openStateDiv">
+    <h3>Opening Statement</h3>
+    <p>Designed with those who are often over looked in mind I created a brand that would highlight them for all their uniqueness! </p>
+  </div>
+  <!-- Product div container -->
+  <div class="productContainer">
+    <!-- Main product div -->
+    <div class="mainProductDiv">
+      <h3>Top Product</h3>
+      <img style="height:350px" src="./images/tshirt3.jpg" alt="">
+    </div>
+    <!-- Second product div -->
+    <div class="secondBestProductDiv">
+      <h3>2nd Best Seller</h3>
+      <img style="height:350px" src="./images/tshirt2.jpg" alt="">
+    </div>
+    <!-- 3rd Best Div -->
+    <div class="thirdProductDiv">
+      <h3>3rd Best Product</h3>
+      <img style="height:350px" src="./images/tshirt1.jpg" alt="">
+    </div>
+  </div>
+
+
+  <div class="footer">
+    <div class="pageLinks">
+      <a href="./pages/Product1.html" class="productPages">Product1</a>
+      <a href="./pages/Product2.html" class="productPages">Product2</a>
+      <a href="./pages/Product3.html" class="productPages">Product3</a>
+    </div>
+    <div class="socialMediaLinks">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+      <a href="#" class="fa fa-youtube"></a>
+      <a href="#" class="fa fa-github"></a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

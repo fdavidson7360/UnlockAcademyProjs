@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: 'Brush Script MT', cursive; font-size: 30px;} /*TODO Change back ground color*/
+* {box-sizing: border-box;}
+
+ .bg-img {
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+
+/* Position the navbar container inside the image */
+.container {
+  margin: 20px;
+  width: auto;
+  float: right;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #13B5DB;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  border: 5px solid #D3D3D3;
+}
+.logoDiv
+{
+  text-align: center;
+  /* height: 200px; */
+}
+#logoImg{
+  height: 200px;
+  border-radius: 50%;
+}
+#product1{
+  border: 10px solid #D3D3D3;
+  height: 400px;
+  width: 600px;
+  margin-right: 300px;
+  /* border-radius: 100%; */
+}
+.productContainer{
+  /* text-align: center; */
+  display: flex;
+  flex-direction: row;
+  padding-left: 300px;
+  padding-top: 100px;
+}
+.productInfoDiv{
+  /* border: 1px solid #555; */
+  /* text-align: center; */
+}
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    /*min-height: 100vh; */
+    /* float; */
+}
+</style>
+</head>
+<body>
+
+<div class="contentContainer">
+
+  <!-- <h2>Navbar & Hero Image on Image</h2> -->
+  <div class="bg-img">
+    <div class="container">
+      <!-- <h2 style="font-size:40pt float:left">The Forgotten Ones</h2> -->
+      <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="./ContactUs.html">Contact</a>
+        <a href="./About.html">About</a>
+      </div>
+    </div>
+  </div>
+  <!-- Opening Statement Div -->
+  <div class="logoDiv">
+    <img id="logoImg" src="../images/logo.png" alt="">
+  </div>
+  <!-- Product div container -->
+  <div class="productContainer">
+    <!-- Main product div -->
+    <div class="productImgDiv">
+      <!-- <h3>Top Product</h3> -->
+      <img id="product1" src="../images/tshirt1.jpg" alt="">
+    </div>
+    <!-- Second product div -->
+    <div class="productInfoDiv">
+      <h1>Unisex's Forgotten Ones Tee</h1>
+      <span>$19.99</span>
+
+      <ul>
+        <li>Light-weight true to size fit</li>
+        <li>100% cotton</li>
+        <li>Modern, trendy, eco friendly </li>
+        <li>Great quality </li>
+      </ul>
+
+      <button type="button" name="button">Add To Cart</button>
+      <!-- <div class="thirdProductDiv">
+        <h3>3rd Best Product</h3>
+        <img style="height:350px" src="./images/tshirt1.jpg" alt="">
+      </div> -->
+    </div>
+    <!-- 3rd Best Div -->
+
+  </div>
+
+
+</body>
+</html>
